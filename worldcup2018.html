@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>WORLD CUP RUSSIA 2018</title>
+	<style>
+	th, td {
+	    width: 100px;
+	    border: 1px solid black;
+	    text-align: center;
+	    vertical-align: middle;
+	}
+	label{
+	    width: 70px;
+	    display:inline-block
+	  }
+	 #col {
+	 	font-size: 13px;
+	 	column-count: 4;
+	 	padding-left: 2em;
+	 	padding-right: 2em;
+	 	column-gap: 15px;
+	 	column-rule: 1px solid gray;
+	 }
+	 #col16 {
+	 	font-size: 14px;
+	 	column-count: 8;
+	 	padding-left: 2em;
+	 	padding-right: 2em;
+	 	column-gap: 15px;
+	 	column-rule: 1px solid gray;
+	 }
+	 #qf {
+	 	font-size: 16px;
+	 	column-count: 4;
+	 	padding-left: 2em;
+	 	padding-right: 2em;
+	 	column-gap: 30px;
+	 	column-rule: 1px solid gray;
+	 }
+	 #sf {
+	 	font-size: 18px;
+	 	column-count: 2;
+	 	padding-left: 2em;
+	 	padding-right: 2em;
+	 	column-gap: 30px;
+	 	column-rule: 1px solid gray;
+	 }
+	 #third {
+	 	font-size: 20px;
+	 	padding-left: 2em;
+	 	padding-right: 2em;
+	 }
+	 #fi {
+	 	font-size: 20px;
+	 	padding-left: 2em;
+	 	padding-right: 2em;
+	 }
+	 tab { 
+	 	padding-left: 4em; 
+	 }
+	 tab2 { 
+	 	padding-left: 2em; 
+	 }
+
+	</style>
+	<script type="text/javascript">
+		class Team {
+			constructor(name) {
+				this.name = name;
+				// this.group = group;
+				Team.count = 0;
+			}
+			static countTeams(){
+				console.log('There are ' + Team.count + ' teams registered.');
+			}
+			// register(){
+			// 	Team.count++;
+			// 	console.log(this.name + ' is now registered in group ' + this.group);
+			// }
+		}
+		class Group extends Team {
+			constructor(name, group) {
+				super(name);
+				this.group = group;
+			}
+			register(){
+				Team.count++;
+				console.log(this.name + ' is now registered in group ' + this.group);
+			}
+
+		}
+		let peru = new Group('Peru', 'C');
+		let denmark = new Group('Denmark', 'C');
+		peru.register();
+		denmark.register();
+		Team.countTeams();
+	</script>
+</head>
+<body>
+
+<form action="results.html" method="get">
+<h3>Player: <input type="text" name="player" size='30'><tab/>WORLD CUP RUSSIA 2018</h3>
+
+<table align="center">
+	<colgroup><col span="8"></colgroup>
+	<tr>
+		<th>Group A</th>
+		<th>Group B</th>
+		<th>Group C</th>
+		<th>Group D</th>
+		<th>Group E</th>
+		<th>Group F</th>
+		<th>Group G</th>
+		<th>Group H</th>
+	</tr>
+	<tr>
+		<td>Russia</td>
+		<td>Portugal</td>
+		<td>France</td>
+		<td>Argentina</td>
+		<td>Brazil</td>
+		<td>Germany</td>
+		<td>Belgium</td>
+		<td>Poland</td>
+	</tr>
+	<tr>
+		<td>Saudi Arabia</td>
+		<td>Spain</td>
+		<td>Australia</td>
+		<td>Iceland</td>
+		<td>Switzerland</td>
+		<td>Mexico</td>
+		<td>Panama</td>
+		<td>Senegal</td>
+	</tr>
+	<tr>
+		<td>Egypt</td>
+		<td>Morocco</td>
+		<td>Peru</td>
+		<td>Croatia</td>
+		<td>Costa Rica</td>
+		<td>Sweden</td>
+		<td>Tunisha</td>
+		<td>Colombia</td>
+	</tr>
+	<tr>
+		<td>Uruguay</td>
+		<td>Iran</td>
+		<td>Denmark</td>
+		<td>Nigeria</td>
+		<td>Serbia</td>
+		<td>South Korea</td>
+		<td>England</td>
+		<td>Japan</td>
+	</tr>
+</table>
+
+<h3><center>Mandatory Matches</center></h3>
+<div id="col">
+	<strong><center>Group A</center></strong></br>
+		<label>Russia 	   	</label><input type="text" size='1' name="Ar1"> - <input type="text" size='1' name="As1"> Saudi Arabia</br>
+		<label>Egypt	   	</label><input type="text" size='1' name="Ae1"> - <input type="text" size='1' name="Au1"> Uruguay</br>
+		<label>Russia 	   	</label><input type="text" size='1' name="Ar2"> - <input type="text" size='1' name="Ae2"> Egypt</br>
+		<label>Uruguay	  	</label><input type="text" size='1' name="Au2"> - <input type="text" size='1' name="As2"> Saudi Arabia</br>
+		<label>Uruguay	   	</label><input type="text" size='1' name="Au3"> - <input type="text" size='1' name="Ar3"> Russia</br>
+		<label>Saudi Arabia	</label><input type="text" size='1' name="As3"> - <input type="text" size='1' name="Ae3"> Egypt</br>
+	</br>
+	<strong><center>Group E</center></strong></br>
+		<label>Brazil		</label><input type="text" size='1' name="Eb1"> - <input type="text" size='1' name="Ez1"> Switzerland</br>
+		<label>Costa Rica	</label><input type="text" size='1' name="Ec1"> - <input type="text" size='1' name="Es1"> Serbia</br>
+		<label>Brazil		</label><input type="text" size='1' name="Eb2"> - <input type="text" size='1' name="Ec2"> Costa Rica</br>
+		<label>Serbia		</label><input type="text" size='1' name="Es2"> - <input type="text" size='1' name="Ez2"> Switzerland</br>
+		<label>Serbia		</label><input type="text" size='1' name="Es3"> - <input type="text" size='1' name="Eb3"> Brazil</br>
+		<label>Switzerland	</label><input type="text" size='1' name="Ez3"> - <input type="text" size='1' name="Ec3"> Costa Rica</br>
+	</br>
+	<strong><center>Group B</center></strong></br>
+		<label>Portugal		</label><input type="text" size='1' name="Bp1"> - <input type="text" size='1' name="Bs1"> Spain</br>
+		<label>Morocco		</label><input type="text" size='1' name="Bm1"> - <input type="text" size='1' name="Bi1"> Iran</br>
+		<label>Portugal		</label><input type="text" size='1' name="Bp2"> - <input type="text" size='1' name="Bm2"> Morocco</br>
+		<label>Iran			</label><input type="text" size='1' name="Bi2"> - <input type="text" size='1' name="Bs2"> Spain</br>
+		<label>Iran			</label><input type="text" size='1' name="Bi3"> - <input type="text" size='1' name="Bp3"> Portugal</br>
+		<label>Spain		</label><input type="text" size='1' name="Bs3"> - <input type="text" size='1' name="Bm3"> Morocco</br>
+	</br>
+	<strong><center>Group F</center></strong></br>
+		<label>Germany		</label><input type="text" size='1' name="Fg1"> - <input type="text" size='1' name="Fm1"> Mexico</br>
+		<label>Sweden		</label><input type="text" size='1' name="Fs1"> - <input type="text" size='1' name="Fk1"> South Korea</br>
+		<label>Germany		</label><input type="text" size='1' name="Fg2"> - <input type="text" size='1' name="Fs2"> Sweden</br>
+		<label>South Korea	</label><input type="text" size='1' name="Fk2"> - <input type="text" size='1'name="Fm2"> Mexico</br>
+		<label>South Korea	</label><input type="text" size='1' name="Fk3"> - <input type="text" size='1' name="Fg3"> Germany</br>
+		<label>Mexico		</label><input type="text" size='1' name="Fm3"> - <input type="text" size='1' name="Fs3"> Sweden</br>
+	</br>
+	<strong><center>Group C</center></strong></br>
+		<label>France		</label><input type="text" size='1' name="Cf1"> - <input type="text" size='1' name="Ca1"> Australia</br>
+		<label>Peru 		</label><input type="text" size='1' name="Cp1"> - <input type="text" size='1' name="Cd1"> Denmark</br>
+		<label>France		</label><input type="text" size='1' name="Cf2"> - <input type="text" size='1' name="Cp2"> Peru</br>
+		<label>Denmark 		</label><input type="text" size='1' name="Cd2"> - <input type="text" size='1' name="Ca2"> Australia</br>
+		<label>Denmark 		</label><input type="text" size='1' name="Cd3"> - <input type="text" size='1' name="Cf3"> France</br>
+		<label>Australia	</label><input type="text" size='1' name="Ca3"> - <input type="text" size='1' name="Cp3"> Peru</br>
+	</br>
+	<strong><center>Group G</center></strong></br>
+		<label>Belgium		</label><input type="text" size='1' name="Gb1"> - <input type="text" size='1' name="Gp1"> Panama</br>
+		<label>Tunisia 		</label><input type="text" size='1' name="Gt1"> - <input type="text" size='1' name="Ge1"> England</br>
+		<label>Belgium		</label><input type="text" size='1' name="Gb2"> - <input type="text" size='1' name="Gt2"> Tunisia</br>
+		<label>England		</label><input type="text" size='1' name="Ge2"> - <input type="text" size='1' name="Gp2"> Panama</br>
+		<label>England		</label><input type="text" size='1' name="Ge3"> - <input type="text" size='1' name="Gb3"> Belgium</br>
+		<label>Panama		</label><input type="text" size='1' name="Gp3"> - <input type="text" size='1' name="Gt3"> Tuninsia</br>
+	</br>
+	<strong><center>Group D</center></strong></br>
+		<label>Argentina	</label><input type="text" size='1' name="Da1"> - <input type="text" size='1' name="Di1"> Iceland</br>
+		<label>Croatia		</label><input type="text" size='1' name="Dc1"> - <input type="text" size='1' name="Dn1"> Nigeria</br>
+		<label>Argentina	</label><input type="text" size='1' name="Da2"> - <input type="text" size='1' name="Dc2"> Croatia</br>
+		<label>Nigeria		</label><input type="text" size='1' name="Dn2"> - <input type="text" size='1' name="Di2"> Iceland</br>
+		<label>Nigeria		</label><input type="text" size='1' name="Dn3"> - <input type="text" size='1' name="Da3"> Argentina</br>
+		<label>Iceland		</label><input type="text" size='1' name="Di3"> - <input type="text" size='1' name="Dc3"> Croatia</br>
+	</br>
+	<strong><center>Group H</center></strong></br>
+		<label>Poland		</label><input type="text" size='1' name="Hp1"> - <input type="text" size='1' name="Hs1"> Senegal</br>
+		<label>Colombia		</label><input type="text" size='1' name="Hc1"> - <input type="text" size='1' name="Hj1"> Japan</br>
+		<label>Poland		</label><input type="text" size='1' name="Hp2"> - <input type="text" size='1' name="Hc2"> Colombia</br>
+		<label>Japan		</label><input type="text" size='1' name="Hj2"> - <input type="text" size='1' name="Hs2"> Senegal</br>
+		<label>Japan		</label><input type="text" size='1' name="Hj3"> - <input type="text" size='1' name="Hp3"> Poland</br>
+		<label>Senegal		</label><input type="text" size='1' name="Hs3"> - <input type="text" size='1' name="Hc3"> Colombia</br>
+</div>
+
+<h3><center>Round of 16</center></h3>
+<div id="col16">
+		<tab2>Match 49</tab2><br>A1 <input type="text" size='1' name="A1"> - <input type="text" size='1' name="B2"> B2
+		<tab2>Match 50</tab2><br>C1 <input type="text" size='1' name="C1"> - <input type="text" size='1' name="D2"> D2
+		<tab2>Match 51</tab2><br>B1 <input type="text" size='1' name="B1"> - <input type="text" size='1' name="A2"> A2
+		<tab2>Match 52</tab2><br>D1 <input type="text" size='1' name="D1"> - <input type="text" size='1' name="C2"> C2
+		<tab2>Match 53</tab2><br>E1 <input type="text" size='1' name="E1"> - <input type="text" size='1' name="F2"> F2
+		<tab2>Match 54</tab2><br>G1 <input type="text" size='1' name="G1"> - <input type="text" size='1' name="H2"> H2
+		<tab2>Match 55</tab2><br>F1 <input type="text" size='1' name="F1"> - <input type="text" size='1' name="E2"> E2
+		<tab2>Match 56</tab2><br>H1 <input type="text" size='1' name="H1"> - <input type="text" size='1' name="G2"> G2
+</div>
+
+<h3><center>Quarter-finals</center></h3>
+<div id="qf">
+	<center>Match 57<br>49 <input type="text" size='1' name="m49"> - <input type="text" size='1' name="m50"> 50</center>
+	<center>Match 58<br>53 <input type="text" size='1' name="m53"> - <input type="text" size='1' name="m54"> 54</center>
+	<center>Match 59<br>51 <input type="text" size='1' name="m51"> - <input type="text" size='1' name="m52"> 52</center>
+	<center>Match 60<br>55 <input type="text" size='1' name="m55"> - <input type="text" size='1' name="m56"> 56</center>
+</div>
+
+<h3><center>Semi-finals</center></h3>
+<div id="sf">
+	<center>Match 61<br>57 <input type="text" size='1' name="m57"> - <input type="text" size='1' name="m58"> 58</center>
+	<center>Match 62<br>59 <input type="text" size='1' name="m59"> - <input type="text" size='1' name="m60"> 60</center>
+</div>
+
+<h3><center>Third Place</center></h3>
+<div id="third">
+	<center>Match 63<br>(loser) 61 <input type="text" size='1' name="l61"> - <input type="text" size='1' name="l62"> 62 (loser)</center>
+</div><br>
+
+<h3><center>Finals</center></h3>
+<div id="third">
+	<center>Match 64<br>61 <input type="text" size='1' name="w61"> - <input type="text" size='1' name="w62"> 62</center>
+</div>
+<br>
+<center><input type=submit value="Submit it NOW!"></center>
+</form>
+<br><center>created by <strong>adnar lozano</strong> @2018 all rights reserved</center>
+</body>
+</html> 

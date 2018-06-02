@@ -1,0 +1,269 @@
+<html>
+<head>
+	<style>
+	label{
+	    /*width: auto;
+	    display:inline-block;*/
+	    column-count: 6;
+	 }
+	 tab0 { 
+	 	padding-left: 2em; 
+	 }
+	 tab { 
+	 	padding-left: 3em; 
+	 }
+	 tab3 { 
+	 	padding-left: 3.2em; 
+	 }
+	 tab2 { 
+	 	padding-left: 2.2em; 
+	 }
+	 tab4 { 
+	 	padding-left: 3.9em; 
+	 }
+	</style>
+</head>
+<script LANGUAGE="JavaScript">
+	function getParams(){
+		var idx = document.URL.indexOf('?');
+		var params = new Array();
+		if (idx != -1) {
+			var pairs = document.URL.substring(idx+1, document.URL.length).split('&');
+			for (var i=0; i<pairs.length; i++){
+			nameVal = pairs[i].split('=');
+			params[nameVal[0]] = nameVal[1];
+			}
+		}
+	return params;
+	}
+		params = getParams();
+		player = unescape(params["player"]);
+		// group A
+		Ar1 = unescape(params["Ar1"]);
+		As1 = unescape(params["As1"]);
+		Ae1 = unescape(params["Ae1"]);
+		Au1 = unescape(params["Au1"]);
+		Ar2 = unescape(params["Ar2"]);
+		Ae2 = unescape(params["Ae2"]);
+		Au2 = unescape(params["Au2"]);
+		As2 = unescape(params["As2"]);
+		Au3 = unescape(params["Au3"]);
+		Ar3 = unescape(params["Ar3"]);
+		As3 = unescape(params["As3"]);
+		Ae3 = unescape(params["Ae3"]);
+		// group E
+		Eb1 = unescape(params["Eb1"]);
+		Ez1 = unescape(params["Ez1"]);
+		Ec1 = unescape(params["Ec1"]);
+		Es1 = unescape(params["Es1"]);
+		Eb2 = unescape(params["Eb2"]);
+		Ec2 = unescape(params["Ec2"]);
+		Es2 = unescape(params["Es2"]);
+		Ez2 = unescape(params["Ez2"]);
+		Es3 = unescape(params["Es3"]);
+		Eb3 = unescape(params["Eb3"]);
+		Ez3 = unescape(params["Ez3"]);
+		Ec3 = unescape(params["Ec3"]);
+		// group B
+		Bp1 = unescape(params["Bp1"]);
+		Bs1 = unescape(params["Bs1"]);
+		Bm1 = unescape(params["Bm1"]);
+		Bi1 = unescape(params["Bi1"]);
+		Bp2 = unescape(params["Bp2"]);
+		Bm2 = unescape(params["Bm2"]);
+		Bi2 = unescape(params["Bi2"]);
+		Bs2 = unescape(params["Bs2"]);
+		Bi3 = unescape(params["Bi3"]);
+		Bp3 = unescape(params["Bp3"]);
+		Bs3 = unescape(params["Bs3"]);
+		Bm3 = unescape(params["Bm3"]);
+		// group F
+		Fg1 = unescape(params["Fg1"]);
+		Fm1 = unescape(params["Fm1"]);
+		Fs1 = unescape(params["Fs1"]);
+		Fk1 = unescape(params["Fk1"]);
+		Fg2 = unescape(params["Fg2"]);
+		Fs2 = unescape(params["Fs2"]);
+		Fk2 = unescape(params["Fk2"]);
+		Fm2 = unescape(params["Fm2"]);
+		Fk3 = unescape(params["Fk3"]);
+		Fg3 = unescape(params["Fg3"]);
+		Fm3 = unescape(params["Fm3"]);
+		Fs3 = unescape(params["Fs3"]);
+		// group C
+		Cf1 = unescape(params["Cf1"]);
+		Ca1 = unescape(params["Ca1"]);
+		Cp1 = unescape(params["Cp1"]);
+		Cd1 = unescape(params["Cd1"]);
+		Cf2 = unescape(params["Cf2"]);
+		Cp2 = unescape(params["Cp2"]);
+		Cd2 = unescape(params["Cd2"]);
+		Ca2 = unescape(params["Ca2"]);
+		Cd3 = unescape(params["Cd3"]);
+		Cf3 = unescape(params["Cf3"]);
+		Ca3 = unescape(params["Ca3"]);
+		Cp3 = unescape(params["Cp3"]);
+		// group G
+		Gb1 = unescape(params["Gb1"]);
+		Gp1 = unescape(params["Gp1"]);
+		Gt1 = unescape(params["Gt1"]);
+		Ge1 = unescape(params["Ge1"]);
+		Gb2 = unescape(params["Gb2"]);
+		Gt2 = unescape(params["Gt2"]);
+		Ge2 = unescape(params["Ge2"]);
+		Gp2 = unescape(params["Gp2"]);
+		Ge3 = unescape(params["Ge3"]);
+		Gb3 = unescape(params["Gb3"]);
+		Gp3 = unescape(params["Gp3"]);
+		Gt3 = unescape(params["Gt3"]);
+		// group D
+		Da1 = unescape(params["Da1"]);
+		Di1 = unescape(params["Di1"]);
+		Dc1 = unescape(params["Dc1"]);
+		Dn1 = unescape(params["Dn1"]);
+		Da2 = unescape(params["Da2"]);
+		Dc2 = unescape(params["Dc2"]);
+		Dn2 = unescape(params["Dn2"]);
+		Di2 = unescape(params["Di2"]);
+		Dn3 = unescape(params["Dn3"]);
+		Da3 = unescape(params["Da3"]);
+		Di3 = unescape(params["Di3"]);
+		Dc3 = unescape(params["Dc3"]);
+		// group H
+		Hp1 = unescape(params["Hp1"]);
+		Hs1 = unescape(params["Hs1"]);
+		Hc1 = unescape(params["Hc1"]);
+		Hj1 = unescape(params["Hj1"]);
+		Hp2 = unescape(params["Hp2"]);
+		Hc2 = unescape(params["Hc2"]);
+		Hj2 = unescape(params["Hj2"]);
+		Hs2 = unescape(params["Hs2"]);
+		Hj3 = unescape(params["Hj3"]);
+		Hp3 = unescape(params["Hp3"]);
+		Hs3 = unescape(params["Hs3"]);
+		Hc3 = unescape(params["Hc3"]);
+		// Round of 15
+		A1 = unescape(params["A1"]);
+		B2 = unescape(params["B2"]);
+		C1 = unescape(params["C1"]);
+		D2 = unescape(params["D2"]);
+		B1 = unescape(params["B1"]);
+		A2 = unescape(params["A2"]);
+		D1 = unescape(params["D1"]);
+		C2 = unescape(params["C2"]);
+		E1 = unescape(params["E1"]);
+		F2 = unescape(params["F2"]);
+		G1 = unescape(params["G1"]);
+		H2 = unescape(params["H2"]);
+		F1 = unescape(params["F1"]);
+		E2 = unescape(params["E2"]);
+		H1 = unescape(params["H1"]);
+		G2 = unescape(params["G2"]);
+		// Quarter-finals
+		m49 = unescape(params["m49"]);
+		m50 = unescape(params["m50"]);
+		m53 = unescape(params["m53"]);
+		m54 = unescape(params["m54"]);
+		m51 = unescape(params["m51"]);
+		m52 = unescape(params["m52"]);
+		m55 = unescape(params["m55"]);
+		m56 = unescape(params["m56"]);
+		// Semi-finals
+		m57 = unescape(params["m57"]);
+		m58 = unescape(params["m58"]);
+		m59 = unescape(params["m59"]);
+		m60 = unescape(params["m60"]);
+		// Third place
+		l61 = unescape(params["l61"]);
+		l62 = unescape(params["l62"]);
+		// Finals
+		w61 = unescape(params["w61"]);
+		w62 = unescape(params["w62"]);
+
+	document.write("<strong>Player</strong> = " + player + "<br>");
+	// matches
+	document.write("<br><strong>Group A</strong><br>" +
+				   "Russia<tab/>" 			+ Ar1 + " - " + As1 + "<tab2/>Saudi Arabia<br>" +
+				   "Egypt<tab3/>" 			+ Ae1 + " - " + Au1 + "<tab2/>Uruguay<br>" +
+				   "Russia<tab/>" 			+ Ar2 + " - " + Ae2 + "<tab2/>Egypt<br>" +
+				   "Uruguay<tab2/>" 		+ Au2 + " - " + As2 + "<tab2/>Saudi Arabia<br>" +
+				   "Uruguay<tab2/>" 		+ Au3 + " - " + Ar3 + "<tab2/>Russia<br>" +
+				   "Saudi Arabia &nbsp;" 	+ As3 + " - " + Ae3 + "<tab2/>Egypt<br>");
+	document.write("<br><strong>Group B</strong><br>" +
+				   "Portugal<tab2/>" 		+ Bp1 + " - " + Bs1 + "<tab2/>Spain<br>" +
+				   "Morocco<tab0/>" 		+ Bm1 + " - " + Bi1 + "<tab2/>Iran<br>" +
+				   "Portugal<tab2/>" 		+ Bp2 + " - " + Bm2 + "<tab2/>Morocco<br>" +
+				   "Iran<tab4/>" 			+ Bi2 + " - " + Bs2 + "<tab2/>Spain<br>" +
+				   "Iran<tab4/>" 			+ Bi3 + " - " + Bp3 + "<tab2/>Portugal<br>" +
+				   "Spain&nbsp;<tab/>" 		+ Bs3 + " - " + Bm3 + "<tab2/>Morocco<br>");
+	document.write("<br><strong>Group C</strong><br>" +
+				   "France<tab/>" 			+ Cf1 + " - " + Ca1 + "<tab2/>Australia<br>" +
+				   "Peru<tab4/>" 			+ Cp1 + " - " + Cd1 + "<tab2/>Denmark<br>" +
+				   "France<tab/>" 			+ Cf2 + " - " + Cp2 + "<tab2/>Peru<br>" +
+				   "Denmark<tab0/>" 		+ Cd2 + " - " + Ca2 + "<tab2/>Australia<br>" +
+				   "Denmark<tab0/>" 		+ Cd3 + " - " + Cf3 + "<tab2/>France<br>" +
+				   "Australia<tab0/>" 		+ Ca3 + " - " + Cp3 + "<tab2/>Peru<br>");
+	document.write("<br><strong>Group D</strong><br>" +
+				   "Argentina &emsp;"		+ Da1 + " - " + Di1 + "<tab2/>Iceland<br>" +
+				   "Croatia<tab2/>" 		+ Dc1 + " - " + Dn1 + "<tab2/>Nigeria<br>" +
+				   "Argentina &emsp;"		+ Da2 + " - " + Dc2 + "<tab2/>Croatia<br>" +
+				   "Nigeria<tab2/>" 		+ Dn2 + " - " + Di2 + "<tab2/>Iceland<br>" +
+				   "Nigeria<tab2/>" 		+ Dn3 + " - " + Da3 + "<tab2/>Argentina<br>" +
+				   "Iceland<tab2/>" 		+ Di3 + " - " + Dc3 + "<tab2/>Croatia<br>");
+	document.write("<br><strong>Group E</strong><br>" +
+				   "Brazil<tab3/>" 			+ Eb1 + " - " + Ez1 + "<tab2/>Switzerland<br>" +
+				   "Costa Rica&emsp;&nbsp;" + Ec1 + " - " + Es1 + "<tab2/>Serbia<br>" +
+				   "Brazil<tab3/>" 			+ Eb2 + " - " + Ec2 + "<tab2/>Costa Rica<br>" +
+				   "Serbia<tab3/>" 			+ Es2 + " - " + Ez2 + "<tab2/>Switzerland<br>" +
+				   "Serbia<tab3/>" 			+ Es3 + " - " + Eb3 + "<tab2/>Brazil<br>" +
+				   "Switzerland&emsp;" 		+ Ez3 + " - " + Ec3 + "<tab2/>Costa Rica<br>");
+	document.write("<br><strong>Group F</strong><br>" +
+				   "Germany<tab/>" 			+ Fg1 + " - " + Fm1 + "<tab2/>Mexico<br>" +
+				   "Sweden<tab3/>&nbsp;" 	+ Fs1 + " - " + Fk1 + "<tab2/>South Korea<br>" +
+				   "Germany<tab/>" 			+ Fg2 + " - " + Fs2 + "<tab2/>Sweden<br>" +
+				   "South Korea &emsp;&nbsp;" 	+ Fk2 + " - " + Fm2 + "<tab2/>Mexico<br>" +
+				   "South Korea &emsp;&nbsp;" 	+ Fk3 + " - " + Fg3 + "<tab2/>Germany<br>" +
+				   "Mexico<tab3/>&nbsp;" 			+ Fm3 + " - " + Fs3 + "<tab2/>Sweden<br>");
+	document.write("<br><strong>Group G</strong><br>" +
+				   "Belgium<tab/>" 			+ Gb1 + " - " + Gp1 + "<tab2/>Panama<br>" +
+				   "Tuninsia<tab/>" 		+ Gt1 + " - " + Ge1 + "<tab2/>England<br>" +
+				   "Belgium<tab/>" 			+ Gb2 + " - " + Gt2 + "<tab2/>Tuninsia<br>" +
+				   "England<tab/>" 			+ Ge2 + " - " + Gp2 + "<tab2/>Panama<br>" +
+				   "England<tab/>" 			+ Ge3 + " - " + Gb3 + "<tab2/>Belgium<br>" +
+				   "Panama<tab3/>" 			+ Gp3 + " - " + Gt3 + "<tab2/>Tuninsia<br>");
+	document.write("<br><strong>Group H</strong><br>" +
+				   "Poland<tab3/>" 			+ Hp1 + " - " + Hs1 + "<tab2/>Senegal<br>" +
+				   "Colombia<tab0/>" 		+ Hc1 + " - " + Hj1 + "<tab2/>Japan<br>" +
+				   "Poland<tab3/>" 			+ Hp2 + " - " + Hc2 + "<tab2/>Colombia<br>" +
+				   "Japan<tab4/>" 			+ Hj2 + " - " + Hs2 + "<tab2/>Senegal<br>" +
+				   "Japan<tab4/>" 			+ Hj3 + " - " + Hp3 + "<tab2/>Poland<br>" +
+				   "Senegal<tab/>" 			+ Hs3 + " - " + Hc3 + "<tab2/>Colombia<br>");
+	// round of 16
+	document.write("<br><strong>Round of 16</strong><br>" +
+				   "A1<tab/>" 		+ A1 + " - " + B2 + "<tab/>B2<tab4/>{ Match 49 }<br>" +
+				   "C1<tab/>" 		+ C1 + " - " + D2 + "<tab/>D2<tab4/>{ Match 50 }<br>" +
+				   "B1<tab/>" 		+ B1 + " - " + A2 + "<tab/>A2<tab4/>{ Match 51 }<br>" +
+				   "D1<tab/>" 		+ D1 + " - " + C2 + "<tab/>C2<tab4/>{ Match 52 }<br>" +
+				   "E1<tab/>"		+ E1 + " - " + F2 + "<tab/>F2<tab4/>{ Match 53 }<br>" +
+				   "G1<tab/>"		+ G1 + " - " + H2 + "<tab/>H2<tab4/>{ Match 54 }<br>" +
+				   "F1<tab/>"		+ F1 + " - " + E2 + "<tab/>E2<tab4/>{ Match 55 }<br>" +
+				   "H1<tab/>"		+ H1 + " - " + G2 + "<tab/>G2<tab4/>{ Match 56 }<br>");
+	// quarter finals
+	document.write("<br><strong>Quarter-finals</strong><br>" +
+				   "Match 49<tab/>"		+ m49 + " - " + m50 + "<tab/>Match 50<tab4/>{ Match 57 }<br>" +
+				   "Match 53<tab/>"		+ m53 + " - " + m53 + "<tab/>Match 54<tab4/>{ Match 58 }<br>" +
+				   "Match 51<tab/>"		+ m51 + " - " + m52 + "<tab/>Match 52<tab4/>{ Match 59 }<br>" +
+				   "Match 55<tab/>"		+ m55 + " - " + m56 + "<tab/>Match 56<tab4/>{ Match 60 }<br>");
+	// semi finals
+	document.write("<br><strong>Semi-finals</strong><br>" +
+				   "Match 57<tab/>"		+ m57 + " - " + m58 + "<tab/>Match 58<tab4/>{ Match 60 }<br>" +
+				   "Match 59<tab/>"		+ m59 + " - " + m60 + "<tab/>Match 60<tab4/>{ Match 61 }<br>");
+	// third place
+	document.write("<br><strong>Third Place</strong><br>" +
+				   "(loser) 61<tab/>"	+ l61 + " - " + l62 + "<tab/>62 (loser)<br>");
+	// finals
+	document.write("<br><strong>Finals</strong><br>" +
+				   "Match 61<tab/>"		+ w61 + " - " + w62 + "<tab/>Match 62<br>");
+
+</script>
+</html>
